@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container mt-3">
+
+    <h3>Search cupcakes</h3>    
+    <form action="" class="search">
+        <input type="text" id="search_term">
+        <button class="btn btn-primary">Search</button>
+    </form>
+<br>
+    <h3>List of Cupcakes</h3>
+    <ul class="cupcake_list">
+    </ul>
+
+    <h3>Add new cupcake</h3>
+    <form action="/api/cupcakes", method=POST, id="cupcake_submit">
+        <div class="form-group">
+            <label for="flavor">flavor</label>
+            <input type="text" id="flavor" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="size">Size</label>
+            <input type="text" id ="size" class="form-control">
+
+        </div>
+        <div class="form-group">
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input type="text" id="image" class="form-control">
+        </div>
+        <button class="btn btn-info my-3">Submit</button>
+    </form>
+</div>
+
+
+{%endblock %}
